@@ -13,4 +13,7 @@ import java.lang.annotation.Target;
 @Target({ElementType.PARAMETER, ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-public @interface HmacAuth {}
+public @interface HmacAuth {
+    // Annotation property to make the @HmacAuth parameter optional, be default it is required
+    boolean required() default true;
+}
